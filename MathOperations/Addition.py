@@ -7,7 +7,7 @@ class Addition:
         return augend + addend
 
     @staticmethod
-    def sum(valuelist):
+    def sumList(valuelist):
         result = 0
         for value in valuelist:
             result = Addition.sum(result, value)
