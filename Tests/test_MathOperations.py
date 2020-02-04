@@ -9,9 +9,13 @@ class MyTestCase(unittest.TestCase):
         result = Addition.sum(1,2)
         self.assertEquals(3,result)
 
-    def test_calc_sub(self):
+    def test_MathOperations_sub(self):
         result = Subtraction.difference(1,2)
         self.assertEquals(-1,result)
+
+    def test_MathOperations_sum_list(self):
+        valueList = [1,2,3]
+        self.assertEqual(6,Addition.sum(valueList))
 '''
     def test_calc_times(self):
         calculator = Calculator();
