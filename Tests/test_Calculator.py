@@ -10,14 +10,25 @@ class MyTestCase(unittest.TestCase):
 
     def test_calc_add(self):
         calculator = Calculator()
-        result = calculator.addition(1,2)
-        self.assertEquals(3,result)
+        calculator.addition(1,2)
+        self.assertEqual(3,calculator.result)
 
     def test_calc_sub(self):
-        calculator = Calculator();
-        result = calculator.subtraction(1,2)
-        self.assertEquals(-1,result)
-        '''
+        calculator = Calculator()
+        calculator.subtraction(1,2)
+        self.assertEqual(-1,calculator.result)
+
+    def test_multiple_calculators(self):
+        calculator1 = Calculator()
+        calculator2 = Calculator()
+        calculator3 = Calculator()
+
+        calculator3.addition(calculator1.addition(1,2),calculator2.subtraction(3,4))
+
+        self.assertEqual(2, calculator3.result)
+
+
+    '''
 
     def test_calc_times(self):
         calculator = Calculator();

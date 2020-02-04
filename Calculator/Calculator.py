@@ -6,14 +6,18 @@ from MathOperations.Subtraction import Subtraction
 
 class Calculator:
 
+    result = 0
+
     def __init__(self):
         pass
 
     def addition(self, a, b):
-        return Addition.sum(a,b)
+        self.result = Addition.sum(a,b)
+        return self.result
     
     def subtraction(self,a,b):
-        return Subtraction.difference(a,b)
+        self.result = Subtraction.difference(a,b)
+        return self.result
     '''
 
     def multiplication(self,a,b):
