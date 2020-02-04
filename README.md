@@ -1,5 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/hc388/calculator_using_Docker/badge.svg?branch=master)](https://coveralls.io/github/hc388/calculator_using_Docker?branch=master)
-
+[![Build Status](https://travis-ci.com/hc388/calculator_using_Docker.svg?branch=master)](https://travis-ci.com/hc388/calculator_using_Docker)
 
 # calculator_using_Docker
 
