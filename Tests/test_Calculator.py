@@ -7,28 +7,32 @@ class MyTestCase(unittest.TestCase):
     def setUp(self):
         self.calculator = Calculator()
 
-    def test_startup(self):
-        calculator = Calculator()
-        self.assertIsInstance(calculator, Calculator)
+    def test_setUp(self):
+        self.assertIsInstance(self.calculator, Calculator)
 
-    def test_calc_add(self):
-        calculator = Calculator()
-        calculator.addition(1,2)
-        self.assertEqual(3,calculator.result)
+    def test_calc_return_add(self):
+        result = self.calculator.addition(1,2)
+        self.assertEqual(3, result)
 
-    def test_calc_sub(self):
-        calculator = Calculator()
-        calculator.subtraction(1,2)
-        self.assertEqual(-1,calculator.result)
+    def test_calc_return_sub(self):
+        result = self.calculator.subtraction(1,2)
+        self.assertEqual(-1, result)
+
+    def test_calc_access_sum_result(self):
+        self.calculator.addition(1,2)
+        self.assertEqual(3, self.calculator.result)
+
+    def test_calc_access_sub_result(self):
+        self.calculator.subtraction(1,2)
+        self.assertEqual(-1, self.calculator.result)
 
     def test_multiple_calculators(self):
         calculator1 = Calculator()
         calculator2 = Calculator()
-        calculator3 = Calculator()
 
-        calculator3.addition(calculator1.addition(1,2),calculator2.subtraction(3,4))
+        self.calculator.addition(calculator1.addition(1,2),calculator2.subtraction(3,4))
 
-        self.assertEqual(2, calculator3.result)
+        self.assertEqual(2, self.calculator3.result)
 
 
     '''
