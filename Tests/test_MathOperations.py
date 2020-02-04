@@ -1,24 +1,18 @@
 import unittest
 
-from Calculator.Calculator import Calculator
+from MathOperations.Addition import Addition
+from MathOperations.Subtraction import Subtraction
 
 class MyTestCase(unittest.TestCase):
 
-    def test_startup(self):
-        calculator = Calculator()
-        self.assertIsInstance(calculator, Calculator)
-
-    def test_calc_add(self):
-        calculator = Calculator()
-        result = calculator.addition(1,2)
+    def test_MathOperations_Add(self):
+        result = Addition.sum(1,2)
         self.assertEquals(3,result)
 
     def test_calc_sub(self):
-        calculator = Calculator();
-        result = calculator.subtraction(1,2)
+        result = Subtraction.difference(1,2)
         self.assertEquals(-1,result)
-        '''
-
+'''
     def test_calc_times(self):
         calculator = Calculator();
         result = calculator.multiplication(1,2)
@@ -38,6 +32,7 @@ class MyTestCase(unittest.TestCase):
         calculator = Calculator();
         result = calculator.square(2)
         self.assertEquals(4,result)
+        
         '''
 
 if __name__ == '__main__':
