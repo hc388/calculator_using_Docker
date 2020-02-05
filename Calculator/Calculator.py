@@ -3,6 +3,13 @@ import math
 
 from MathOperations.Addition import Addition
 from MathOperations.Subtraction import Subtraction
+from MathOperations.Division import Division
+from MathOperations.Multiplication import Multiplication
+from MathOperations.Logarithm import Logarithm
+from MathOperations.Exponentiation import Exponentiation
+from MathOperations.nthRoot import nthRoot
+
+
 
 class Calculator:
 
@@ -18,18 +25,24 @@ class Calculator:
     def subtraction(self,a,b):
         self.result = Subtraction.difference(a,b)
         return self.result
-    '''
 
     def multiplication(self,a,b):
-        return a*b
+        self.result = Multiplication.multiply(a,b)
+        return self.result
 
     def divide(self,a,b):
-        return a/b
+        self.result = Division.divide(a,b)
+        return self.result
 
-    def square_root(self,a):
-        return math.sqrt(a)
+    def nthRoot(self,a,b):
+        self.result = nthRoot.rooting(a,b)
+        return self.result
 
-    def square(self,a):
-        return a*a
+    def exponentiate(self,a,b):
+        self.result = Exponentiation.power(a,b)
+        return self.result
 
-'''
+    def logger(self,a,b):
+        self.result = Logarithm.log(a,b)
+        return self.result
+
